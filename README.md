@@ -11,10 +11,8 @@
 
 <p align="center">
   <!-- TODO: Update badge URLs with your actual repo path -->
-  <a href="https://github.com/your-org/virtual-assistant/actions"><img src="https://img.shields.io/github/actions/workflow/status/your-org/virtual-assistant/ci.yml?branch=main&style=flat-square" alt="CI"></a>
-  <a href="https://github.com/your-org/virtual-assistant/blob/main/LICENSE"><img src="https://img.shields.io/github/license/your-org/virtual-assistant?style=flat-square" alt="License"></a>
-  <a href="https://github.com/your-org/virtual-assistant/releases"><img src="https://img.shields.io/github/v/release/your-org/virtual-assistant?style=flat-square" alt="Release"></a>
-  <a href="https://github.com/your-org/virtual-assistant/stargazers"><img src="https://img.shields.io/github/stars/your-org/virtual-assistant?style=flat-square" alt="Stars"></a>
+  <a href="https://github.com/dlabsai/enrolment-agent/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dlabsai/enrolment-agent?style=flat-square" alt="License"></a>
+  <a href="https://github.com/dlabsai/enrolment-agent/stargazers"><img src="https://img.shields.io/github/stars/dlabsai/enrolment-agent?style=flat-square" alt="Stars"></a>
 </p>
 
 <p align="center">
