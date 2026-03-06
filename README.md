@@ -1,6 +1,5 @@
 <p align="center">
-  <!-- TODO: Replace with actual logo -->
-  <img src="docs/assets/logo.png" alt="Enrollment Agent Logo" width="120" />
+  <img src="docs/assets/logo.svg" alt="University Enrollment Agent logo" width="140" />
 </p>
 
 <h1 align="center">University Enrollment Agent</h1>
