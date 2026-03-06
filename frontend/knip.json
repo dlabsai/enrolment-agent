@@ -1,0 +1,40 @@
+{
+    "$schema": "https://unpkg.com/knip@5/schema.json",
+    "workspaces": {
+        "packages/app-public": {
+            "entry": [
+                "src/main.tsx",
+                "src/components/loading-indicator.tsx",
+                "src/types/dom.d.ts"
+            ],
+            "project": ["src/**/*.{ts,tsx}"],
+            "paths": {
+                "@va/shared/*": ["../shared/src/*"],
+                "@va/shared/vite": ["../shared/src/vite.ts"],
+                "@/*": ["src/*"]
+            }
+        },
+        "packages/app-internal": {
+            "entry": ["src/main.tsx"],
+            "project": ["src/**/*.{ts,tsx}"],
+            "ignore": ["src/components/ui/**"],
+            "paths": {
+                "@va/shared/*": ["../shared/src/*"],
+                "@va/shared/vite": ["../shared/src/vite.ts"],
+                "@/*": ["src/*"]
+            }
+        },
+        "packages/shared": {
+            "entry": ["src/**/*.{ts,tsx}"],
+            "project": ["src/**/*.{ts,tsx}"],
+            "paths": {
+                "@va/shared/*": ["src/*"]
+            },
+            "ignore": [
+                "src/components/ui/**",
+                "src/components/ai-elements/**"
+            ],
+            "includeEntryExports": true
+        }
+    }
+}

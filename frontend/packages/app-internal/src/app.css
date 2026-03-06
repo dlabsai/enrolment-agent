@@ -1,0 +1,5 @@
+@import "@va/shared/index.css";
+
+@source "./**/*.{ts,tsx}";
+@source "../../shared/src/**/*.{ts,tsx}";
+@source "../../../node_modules/.pnpm/node_modules/streamdown/dist/*.js";

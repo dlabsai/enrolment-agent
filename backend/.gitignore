@@ -1,0 +1,12 @@
+.ruff_cache
+.cache
+.coverage
+.venv
+.vscode
+__pycache__
+data
+!data/catalog_courses.json
+!data/catalog_programs.json
+reports
+static-internal
+static-public

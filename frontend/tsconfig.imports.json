@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@va/shared/*": ["packages/shared/src/*"],
+            "@va/shared/vite": ["packages/shared/src/vite.ts"],
+            "@/*": [
+                "packages/app-internal/src/*",
+                "packages/app-public/src/*"
+            ]
+        }
+    },
+    "files": [],
+    "include": [
+        "packages/app-public/src/**/*",
+        "packages/app-internal/src/**/*",
+        "packages/shared/src/**/*"
+    ],
+    "references": [
+        {
+            "path": "./packages/app-public/tsconfig.json"
+        },
+        {
+            "path": "./packages/app-internal/tsconfig.json"
+        },
+        {
+            "path": "./packages/shared/tsconfig.json"
+        }
+    ]
+}

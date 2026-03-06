@@ -1,0 +1,132 @@
+[project]
+name = "app"
+version = "0.0.0"
+description = ""
+requires-python = ">=3.13"
+dependencies = [
+    "alembic",
+    "apscheduler",
+    "beautifulsoup4",
+    "devtools",
+    "fastapi[standard]",
+    "httpx",
+    "langchain-text-splitters",
+    "logfire[psycopg,fastapi,requests,sqlalchemy]",
+    "lxml",
+    "markdownify",
+    "office365-rest-python-client",
+    "passlib[bcrypt]",
+    "pgvector",
+    "psycopg[binary]",
+    "pydantic",
+    "pydantic-ai-slim[openai,openrouter]",
+    "pydantic-evals",
+    "pydantic-settings",
+    "pyjwt",
+    "python-docx",
+    "python-dotenv",
+    "python-slugify",
+    "rich",
+    "sqlalchemy",
+    "tenacity",
+    "tiktoken",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "docker",
+    "lxml-stubs",
+    "pyright",
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+    "testcontainers[postgres]",
+    "types-beautifulsoup4",
+    "types-docker",
+    "types-passlib",
+    "vulture",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "ANN401",  # any-type
+    "BLE001",  # blind-except
+    "C901",    # complex-structure
+    "COM812",  # missing-trailing-comma
+    "CPY001",  # missing-copyright-notice
+    "D1",      # undocumented-public-*
+    "D203",    # incorrect-blank-line-before-class
+    "D213",    # multi-line-summary-second-line
+    "EM101",   # raw-string-in-exception
+    "EM102",   # f-string-in-exception
+    "ERA001",  # commented-out-code
+    "FBT002",  # boolean-default-value-positional-argument
+    "FIX002",  # line-contains-todo
+    "G004",    # logging-f-string
+    "PERF401", # manual-list-comprehension
+    "PERF403", # manual-dict-comprehension    
+    "PLR0911", # too-many-return-statements
+    "PLR0912", # too-many-branches
+    "PLR0913", # too-many-arguments
+    "PLR0915", # too-many-statements
+    "S101",    # assert
+    "S701",    # jinja2-autoescape-false
+    "T201",    # print
+    "TC001",   # typing-only-first-party-import
+    "TC002",   # typing-only-third-party-import
+    "TC006",   # runtime-cast-value
+    "TD002",   # missing-todo-author
+    "TD003",   # missing-todo-link
+    "TRY003",  # raise-vanilla-args
+]
+unfixable = ["F401"] # unused-import
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"app/alembic/*" = ["INP001"]
+"app/alembic/versions/*" = ["D400", "D415"]
+"tests/*" = ["ANN201", "PLR2004", "PLC0415", "B009", "ARG001"]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+[tool.ruff.lint.flake8-builtins]
+builtins-ignorelist = ["id"]
+
+# [tool.ruff.lint.flake8-tidy-imports]
+# ban-relative-imports = "all"
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true
+line-ending = "lf"
+
+[tool.pyright]
+typeCheckingMode = "strict"
+reportMissingTypeStubs = false
+reportUnnecessaryIsInstance = false
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "eval: marks tests as evaluation tests (use live LLMs, may have variable results)",
+    "llm: marks tests that connect to LLMs",
+]
+filterwarnings = [
+    "ignore:Support for class-based.*:DeprecationWarning:pydantic._internal._config",
+    "ignore:You should use `Logger` instead:DeprecationWarning",
+    "ignore:You should use `LoggerProvider` instead:DeprecationWarning",
+    "ignore:You should use `ProxyLoggerProvider` instead:DeprecationWarning",
+]
+
+[tool.logfire]
+ignore_no_config = true

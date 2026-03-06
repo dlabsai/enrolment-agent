@@ -1,0 +1,19 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules
+
+# Build outputs
+dist-*
+packages/build-config/dist
+.vite-temp
+
+# Misc
+.idea
+.DS_Store
+deploy.sh
+task.md
+.pnpm-store
