@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/logo.svg" alt="University Enrollment Agent logo" width="140" />
+  <img src="docs/assets/logo.png" alt="University Enrollment Agent logo" width="140" />
 </p>
 
 <h1 align="center">University Enrollment Agent</h1>
@@ -10,8 +10,8 @@
 
 <p align="center">
   <!-- TODO: Update badge URLs with your actual repo path -->
-  <a href="https://github.com/dlabsai/enrolment-agent/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dlabsai/enrolment-agent?style=flat-square" alt="License"></a>
-  <a href="https://github.com/dlabsai/enrolment-agent/stargazers"><img src="https://img.shields.io/github/stars/dlabsai/enrolment-agent?style=flat-square" alt="Stars"></a>
+  <a href="https://github.com/dlabsai/enrollment-agent/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dlabsai/enrollment-agent?style=flat-square" alt="License"></a>
+  <a href="https://github.com/dlabsai/enrollment-agent/stargazers"><img src="https://img.shields.io/github/stars/dlabsai/enrollment-agent?style=flat-square" alt="Stars"></a>
 </p>
 
 <p align="center">
